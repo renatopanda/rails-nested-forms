@@ -1,0 +1,15 @@
+<p>
+  <strong>Project:</strong> <%= project.title %> | <%= link_to 'Edit project', edit_project_path(project) %><br>
+  Description: <%= project.description %><br>
+  <% if project.people.any? %>
+  
+  <strong>Project Members:</strong>
+  <ul>
+  <% project.people.each do |person| %>
+  <li>
+    <%= person.name %>, <%= person.email %>
+  </li>
+  <% end %>
+  </ul>
+  <% end %>
+</p>

@@ -1,0 +1,27 @@
+<%= form_for @project do |f| %>
+  <%= render 'shared/errors', object: @project %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <p><strong>People:</strong></p>
+
+    <%= f.fields_for :people do |person| %>
+      <div>
+        <%= person.label :name %>
+        <%= person.text_field :name %>
+
+        <%= person.label :email %>
+        <%= person.text_field :email %>
+
+        <%= person.check_box :_destroy %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
