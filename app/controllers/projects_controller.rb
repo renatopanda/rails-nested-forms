@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find_by(id: params[:id])
+    #@project.people.build
   end
 
   def update

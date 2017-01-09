@@ -6,3 +6,4 @@ adapted from [1](http://guides.rubyonrails.org/form_helpers.html#building-comple
 
 git tags:
 v1. CRUD using standard forms a static number of nested fields (3)
+v2. Updated version using cocoon gem for dynamic number of fields

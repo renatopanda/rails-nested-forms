@@ -5,3 +5,4 @@ class Project < ApplicationRecord
 	
 	accepts_nested_attributes_for :people, allow_destroy: true, reject_if: proc { |att| att['name'].blank? || att['email'].blank? }
 end
+

@@ -11,16 +11,12 @@
     <p><strong>People:</strong></p>
 
     <%= f.fields_for :people do |person| %>
-      <div>
-        <%= person.label :name %>
-        <%= person.text_field :name %>
-
-        <%= person.label :email %>
-        <%= person.text_field :email %>
-
-        <%= person.check_box :_destroy %>
-      </div>
+      <%= render 'person_fields', f: person %>
     <% end %>
+
+    <div class="links">
+        <%= link_to_add_association 'add person', f, :people %>
+      </div>
   </div>
 
   <%= f.submit %>
